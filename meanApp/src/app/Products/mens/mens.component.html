@@ -1,0 +1,44 @@
+<div
+  *ngFor="let product of myProduct"
+  [ngStyle]="{
+    opacity: product.inStock === 0 ? 0.4 : 1,
+    cursor: product.inStock === 0 ? 'not-allowed' : 'pointer'
+  }"
+>
+  <div class="col s12 m4 l3 producs">
+    <div class="card">
+      <div class="card-image">
+        <img src="{{ product.prodctImage }}" alt="" />
+
+        <div class="custprobtn">
+          <a
+            class="btn-floating halfway-fab waves-effect waves-light productBtn pink accent-3"
+            ><i class="material-icons">shopping_cart</i></a
+          >
+          <a
+            class="btn-floating halfway-fab waves-effect waves-light productBtn pink accent-3"
+            ><i class="material-icons">favorite</i></a
+          >
+        </div>
+      </div>
+      <div class="card-content">
+        <h5 class="product-brand">{{ product.productName }}</h5>
+        <h6 class="product-product">{{ product.proctDiscription }}</h6>
+        <div class="product-price">
+          <span> Rs {{ product.price }} </span>
+        </div>
+        <ng-container
+          *ngIf="product.inStock != 0; then available; else outofStock"
+        >
+        </ng-container>
+        <ng-template #available>
+          <h6>{{ product.inStock }} set available</h6>
+        </ng-template>
+
+        <ng-template #outofStock>
+          <h6 [ngClass]="{ producsbg: true }">out of Stock</h6>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

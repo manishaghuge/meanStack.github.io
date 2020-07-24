@@ -1,0 +1,78 @@
+<nav class="white sticky1" role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="#" class="brand-logo">Logo</a>
+    <ul class="custnav hide-on-med-and-down">
+      <li>
+        <a class="dropdown-trigger" href="#" data-target="dropdown1">Mens</a>
+      </li>
+
+      <ul id="dropdown1" class="dropdown-content dropdown-cust">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li><a href="#!">three</a></li>
+      </ul>
+      <li>
+        <a class="dropdown-trigger" href="#" data-target="dropdown1">Womens</a>
+      </li>
+
+      <ul id="dropdown1" class="dropdown-content dropdown-cust">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li><a href="#!">three</a></li>
+      </ul>
+      <li>
+        <a class="dropdown-trigger" href="#" data-target="dropdown1">Kids</a>
+      </li>
+
+      <ul id="dropdown1" class="dropdown-content dropdown-cust">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li><a href="#!">three</a></li>
+      </ul>
+    </ul>
+
+    <ul class="right">
+      <li>
+        <a class="dropdown-trigger" href="#" data-target="dropdown2"
+          ><i class="material-icons">person</i></a
+        >
+      </li>
+      <div id="dropdown2" class="dropdown-content dropdown-cust">
+        <a href="#!" class="waves-effect waves-light btn">Login</a>
+        <a href="#!" class="waves-effect waves-light btn">signUp</a>
+        <ul class="">
+          <li><a routerLink="/myProfile">My Profile</a></li>
+          <li><a href="#">My Orders</a></li>
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">My Coupons</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Refer a Friend</a></li>
+
+          <!-- <li role="separator" class="divider"></li>
+
+                  <li *ngIf="isLoggedIn"><a (click)="logout()">Logout</a></li> -->
+        </ul>
+      </div>
+      <!-- <div class="listuser" *ngIf="isLoggedIn"> -->
+
+      <li>
+        <a href="#"><i class="material-icons">shopping_cart</i></a>
+      </li>
+      <li>
+        <a href="#"><i class="material-icons">favorite</i></a>
+      </li>
+    </ul>
+
+    <ul id="nav-mobile" class="sidenav">
+      <li><a href="#">Mens</a></li>
+      <li><a href="#">Womens</a></li>
+      <li><a href="#">Kids</a></li>
+    </ul>
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+      ><i class="material-icons">menu</i></a
+    >
+  </div>
+</nav>
