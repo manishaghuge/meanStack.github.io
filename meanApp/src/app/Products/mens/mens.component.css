@@ -29,11 +29,14 @@
   margin-top: 0;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  text-align: justify;
+  /* white-space: nowrap; */
   font-weight: 400;
   display: block;
 }
-
+.showmoreclass {
+  background-color: #ff3e6c;
+}
 .product-price {
   line-height: 15px;
   margin: 10px 0 6px;

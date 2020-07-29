@@ -36,9 +36,9 @@ import { Component, OnInit } from '@angular/core';
       </div>
       <div class="footer-copyright">
         <div class="container">
-          Made by
+          &copy;2020
           <a class="brown-text text-lighten-3" href="http://materializecss.com"
-            >Materialize</a
+            >HST</a
           >
         </div>
       </div>

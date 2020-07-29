@@ -12,6 +12,10 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { MensComponent } from './Products/mens/mens.component';
 import { WomensComponent } from './Products/womens/womens.component';
 import { KidsComponent } from './Products/kids/kids.component';
+import { CustpipePipe } from './pipes/custpipe.pipe';
+import { DiscripipePipe } from './pipes/discripipe.pipe';
+import { DiscountPipe } from './pipes/discount.pipe';
+import { SimpleStyleDirective } from './directives/simple-style.directive';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,10 @@ import { KidsComponent } from './Products/kids/kids.component';
     MensComponent,
     WomensComponent,
     KidsComponent,
+    CustpipePipe,
+    DiscripipePipe,
+    DiscountPipe,
+    SimpleStyleDirective,
   ],
   imports: [BrowserModule],
   providers: [],

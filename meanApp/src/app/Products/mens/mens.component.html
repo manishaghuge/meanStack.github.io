@@ -1,12 +1,12 @@
 <div
-  *ngFor="let product of myProduct"
+  *ngFor="let product of myProduct; let i = index"
   [ngStyle]="{
     opacity: product.inStock === 0 ? 0.4 : 1,
     cursor: product.inStock === 0 ? 'not-allowed' : 'pointer'
   }"
 >
   <div class="col s12 m4 l3 producs">
-    <div class="card">
+    <div class="card" appSimpleStyle>
       <div class="card-image">
         <img src="{{ product.prodctImage }}" alt="" />
 
@@ -23,9 +23,28 @@
       </div>
       <div class="card-content">
         <h5 class="product-brand">{{ product.productName }}</h5>
-        <h6 class="product-product">{{ product.proctDiscription }}</h6>
+
+        <h6 class="product-product">
+          <span (click)="showMoreText()">
+            {{ product.proctDiscription | discripipe: togglePipe }}
+
+            {{ togglePipe ? "..." : "Show Less" }}</span
+          >
+        </h6>
         <div class="product-price">
-          <span> Rs {{ product.price }} </span>
+          <span>
+            Rs :
+            {{ product.price | discount: product.discountp | currency: "INR" }}
+            <!-- {{ ((product.price - product.discountp) / product.price) * 100 }} -->
+          </span>
+        </div>
+        <div class="product-price">
+          <!-- <span> squrt of 144 : {{ 144 | custpipe }} </span> -->
+          <span
+            ><small
+              >M.R.P : <s>{{ product.price }}</s></small
+            >{{ product.discountp | percent }}OFF</span
+          >
         </div>
         <ng-container
           *ngIf="product.inStock != 0; then available; else outofStock"
@@ -42,3 +61,6 @@
     </div>
   </div>
 </div>
+
+<!-- custom directives implements -->
+<!-- <h1 >{{ data | json }}</h1> -->
